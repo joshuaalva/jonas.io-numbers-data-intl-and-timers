@@ -270,3 +270,13 @@ console.log(Number.isNaN(+`20x`)); //true
 // Checking if value is number
 console.log(Number.isFinite(20)); //true
 console.log(Number.isFinite(`20`)); //false
+
+// Square Root
+console.log(Math.sqrt(16));
+console.log(16 ** (1 / 2)); // exponentiation
+console.log(Math.max(5, 18, `23`, 11, 2)); // returns max does type coercion as well but does not do parsing
+console.log(Math.min(5, 18, `23`, 11, 2));
+console.log(Math.PI); // constant
+console.log(Math.PI * Number.parseFloat`10 px` ** 2); // radius
+console.log(Math.trunc(Math.random() * 6) + 1);
+const randomInt = (min, max) => Math.trunc(Math.random() * (max - min) + 1);
