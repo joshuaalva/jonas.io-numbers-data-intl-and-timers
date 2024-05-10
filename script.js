@@ -298,3 +298,25 @@ console.log((2.7).toFixed(0)); // 3 >> returns a string
 console.log((2.7).toFixed(3)); // 2.700 will add 0's until third decimal point
 // .toFixed will always return a string and not a number
 // + turns string into number don't forget
+
+// The Remainder Operator
+// returns left over from division
+console.log(5 % 2); // returns 1
+const isEven = n => n % 2 === 0;
+console.log(isEven(8)); // true
+console.log(isEven(23)); // false
+
+// Numeric Seperators
+const diameter = 287_460_000_000;
+// can use underscore instead of commas
+// makes it easier to understand
+console.log(diameter);
+// engine basically ignores the underscores
+// but again makes it easier for developers to read
+const priceCent = 345_99;
+console.log(priceCent);
+const PI = 3.1415; // can only place underscores inbetween numbers
+// will not work at beginning or end of a number either
+// also cannot place two in a row
+console.log(Number(`230_000`)); //NaN this is a string will only work with numbers
+console.log(parseInt(230_000)); //230 everything else will be ignored
