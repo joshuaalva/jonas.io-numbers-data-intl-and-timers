@@ -253,6 +253,7 @@ btnSort.addEventListener('click', function (e) {
 // LECTURES
 
 // Conversion
+/* <<<<<<<<<< delete this one if you have too ---------------------------------------->
 console.log(23 === 23.0); //true
 console.log(Number(`23`)); //string to number
 console.log(+`23`); // tring to number
@@ -337,4 +338,29 @@ console.log(10n / 3n);
 console.log(10 / 3);
 
 // Creating Dates
-// daily commit
+/*
+const now = new Date(); // current date
+console.log(now);
+
+console.log(new Date(`Wed May 15 2024 03:34:27 `)); // parses date we give it
+console.log(new Date(`December 24, 2015`));
+console.log(new Date(account1.movementsDates[0])); // based on a string
+// can also pass in day months years even seconds this way
+// month is zero based so november is 10 not 11
+
+// Working with dates
+
+const future = new Date(2037, 10, 19, 15, 24);
+console.log(future);
+console.log(future.getFullYear());
+console.log(future.getMonth());
+console.log(future.getDate());
+console.log(future.getDay());
+//.getMinutes , .getSeconds
+console.log(future.toISOString());
+console.log(future.getTime());
+future.setFullYear(2040);
+console.log(future);
+*/
+
+// Adding Dates to 'Bankist' App
