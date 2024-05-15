@@ -320,3 +320,21 @@ const PI = 3.1415; // can only place underscores inbetween numbers
 // also cannot place two in a row
 console.log(Number(`230_000`)); //NaN this is a string will only work with numbers
 console.log(parseInt(230_000)); //230 everything else will be ignored
+
+// Working with BigInt
+console.log(2 ** 53 - 1); // essentially the biggest number that jS can safely represent
+console.log(Number.MAX_SAFE_INTEGER); // any interger larger can not be saved accurately
+console.log(987261349781623478163487263495872364598765324n); //n turns it into a bigint
+
+// Operations
+console.log(10000n + 10000n); // operators work the same with bigint
+// cannot mix bigint with regular numbers
+console.log(20n > 15); // true
+console.log(20n === 20); // false jS doesn't do type coercion with triple equal
+
+// Divisions
+console.log(10n / 3n);
+console.log(10 / 3);
+
+// Creating Dates
+// daily commit
