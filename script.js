@@ -154,6 +154,22 @@ const updateUI = function (acc) {
 ///////////////////////////////////////
 // Event handlers
 let currentAccount;
+// Fake always logged in
+// ----->
+currentAccount = account1;
+updateUI(currentAccount);
+containerApp.style.opacity = 100;
+// ----->
+
+const now = new Date();
+// labelDate.textContent = now;
+// day/month/year
+const day = now.getDate();
+const month = now.getMonth() + 1;
+const year = now.getFullYear();
+const hour = now.getHours();
+const minutes = now.getMinutes();
+labelDate.textContent = `${day}/${month}/${year}, ${hour}:${minutes}`;
 
 btnLogin.addEventListener('click', function (e) {
   // Prevent form from submitting
@@ -364,4 +380,3 @@ console.log(future);
 */
 
 // Adding Dates to 'Bankist' App
-// Daily Commit
