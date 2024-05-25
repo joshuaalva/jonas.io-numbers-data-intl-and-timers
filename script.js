@@ -90,7 +90,8 @@ const displayMovements = function (acc, sort = false) {
 
   movs.forEach(function (mov, i) {
     const type = mov > 0 ? 'deposit' : 'withdrawal';
-
+    const date = new Date(acc.movementsDates[i]);
+    <div class="movements__date">${displayDate}</div>;
     const html = `
       <div class="movements__row">
         <div class="movements__type movements__type--${type}">${
@@ -144,7 +145,7 @@ createUsernames(accounts);
 
 const updateUI = function (acc) {
   // Display movements
-  displayMovements(acc.movements);
+  displayMovements(acc);
 
   // Display balance
   calcDisplayBalance(acc);
@@ -262,7 +263,7 @@ btnClose.addEventListener('click', function (e) {
 let sorted = false;
 btnSort.addEventListener('click', function (e) {
   e.preventDefault();
-  displayMovements(currentAccount.movements, !sorted);
+  displayMovements(acc.movements, !sorted);
   sorted = !sorted;
 });
 
@@ -382,3 +383,4 @@ console.log(future);
 */
 
 // Adding Dates to 'Bankist' App
+// Operations with Dates
